@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  front:
+    build: ./front
+    command: npm run dev
+    volumes:
+      - ./front/src:/src
+    ports:
+      - "$FRONT_PORT:3000"
+    init: true
+    restart: on-failure
+
+  storybook:
+    build: ./front
+    command: npm run storybook
+    volumes:
+      - ./front/src:/src
+    ports:
+      - "$STORYBOOK_PORT:9001"
+    init: true
+    restart: on-failure
+

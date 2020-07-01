@@ -1,0 +1,12 @@
+{
+	"generators": {
+		"1533ee36": {
+			"type": "local",
+			"path": "/src/.npm/_npx/7/lib/node_modules/create-nuxt-app/lib",
+			"hash": "1533ee36"
+		}
+	},
+	"answers": {
+		"1533ee36__npm__": {}
+	}
+}
