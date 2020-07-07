@@ -1,11 +1,23 @@
 <template>
-  <MyCard :card-items="options" width="350" height="400" />
+  <v-row align="center" justify="center">
+    <MyCard v-for="(option, i) in options" :key="i" width="350" height="400">
+      <template #cardImage>
+        <v-img height="250" :src="option.src || ''" />
+      </template>
+      <template #cardTitle>
+        {{ option.title }}
+      </template>
+      <template #cardText>
+        {{ option.text }}
+      </template>
+    </MyCard>
+  </v-row>
 </template>
 
 <script>
 export default {
   components: {
-    MyCard: () => import('@/components/Molucules/Card'),
+    MyCard: () => import('@/components/Atom/TheCard'),
   },
   data() {
     return {

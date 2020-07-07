@@ -1,8 +1,4 @@
-import Vue from 'vue'
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.css'
 import { storiesOf } from '@storybook/vue'
-import { action } from '@storybook/addon-actions'
 import MyCard from './../components/Molucules/Card'
 
 storiesOf('Molucules.Card', module).add(
@@ -36,8 +32,11 @@ storiesOf('Molucules.Card', module).add(
         ],
       }
     },
-    methods: { action: action('変更されました') },
-    template: '<MyCard :card-items="options" width="350" height="400" />',
+    template: `
+    <div>
+      <MyCard :cardItems="options" width="350" height="400" />
+    </div>
+    `,
   }),
   {
     notes: 'some documentation here',
