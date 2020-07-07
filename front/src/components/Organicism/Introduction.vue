@@ -1,7 +1,5 @@
 <template>
-  <v-continer>
-    <MyCard :card-items="options" />
-  </v-continer>
+  <MyCard :card-items="options" width="350" height="400" />
 </template>
 
 <script>
