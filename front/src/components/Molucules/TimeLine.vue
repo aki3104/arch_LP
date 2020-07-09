@@ -7,7 +7,7 @@
         :icon="item.icon || 'mdi-star'"
       >
         <v-card max-width="600" min-height="200">
-          <v-card-title class="indigo lighten-2">
+          <v-card-title class="blue lighten-2">
             <h2 class="white--text font-weight-light">
               {{ item.title }}
             </h2>

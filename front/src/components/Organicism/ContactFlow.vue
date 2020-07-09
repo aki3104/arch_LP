@@ -1,5 +1,6 @@
 <template>
-  <v-container>
+  <v-container pa-0 ma-0 fluid>
+    <MyTitle title="ご契約までの流れ" />
     <MyTimeLine :line-items="options" dense />
   </v-container>
 </template>
@@ -8,6 +9,7 @@
 export default {
   components: {
     MyTimeLine: () => import('@/components/Molucules/TimeLine'),
+    MyTitle: () => import('@/components/Molucules/Title'),
   },
   data() {
     return {

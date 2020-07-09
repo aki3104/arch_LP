@@ -1,6 +1,6 @@
 <template>
   <v-row align="center" justify="center">
-    <v-card max-width="600" min-height="200">
+    <v-card max-width="600" min-height="200" flat>
       <v-card-title>
         <h2>
           {{ title }}
