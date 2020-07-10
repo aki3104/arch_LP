@@ -1,6 +1,11 @@
 <template>
   <v-container pa-0 ma-0 fluid fill-height>
-    <MyTitle title="会社について" />
+    <MyImg
+      :img-src="require('@/static/images/title.jpg')"
+      widht="100vw"
+      height="100px"
+      title="業務内容"
+    />
     <MyCompany />
     <MyProfile />
   </v-container>
@@ -11,7 +16,7 @@ export default {
   components: {
     MyProfile: () => import('@/components/Organicism/Profile'),
     MyCompany: () => import('@/components/Organicism/Company'),
-    MyTitle: () => import('@/components/Molucules/Title'),
+    MyImg: () => import('@/components/Atom/TheImg'),
   },
 }
 </script>

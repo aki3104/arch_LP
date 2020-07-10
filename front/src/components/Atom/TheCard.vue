@@ -1,10 +1,10 @@
 <template>
-  <v-card :max-width="width" :min-height="height" class="ma-5">
+  <v-card :max-width="width" :min-height="height" :flat="flat">
     <slot name="cardImage" />
-    <v-card-title>
+    <v-card-title class="pa-0" :class="titleClass">
       <slot name="cardTitle" />
     </v-card-title>
-    <v-card-text>
+    <v-card-text class="pa-0" :class="textClass">
       <slot name="cardText" />
     </v-card-text>
   </v-card>
@@ -15,6 +15,9 @@ export default {
   props: {
     width: String,
     height: String,
+    flat: Boolean,
+    titleClass: String,
+    textClass: String,
   },
 }
 </script>

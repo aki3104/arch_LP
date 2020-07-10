@@ -3,6 +3,7 @@
     <MyTop />
     <MyIntroduct />
     <MyContactFlow />
+    <MyLink />
   </v-container>
 </template>
 
@@ -12,6 +13,7 @@ export default {
     MyTop: () => import('@/components/Organicism/Top'),
     MyIntroduct: () => import('@/components/Organicism/Introduct'),
     MyContactFlow: () => import('@/components/Organicism/ContactFlow'),
+    MyLink: () => import('@/components/Organicism/Link'),
   },
 }
 </script>
