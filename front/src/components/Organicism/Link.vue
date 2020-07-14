@@ -1,41 +1,36 @@
 <template>
   <v-container pa-0 ma-0 fluid>
     <v-row align="center" justify="center" class="ma-0">
-      <MyCard
+      <v-col
         v-for="(option, i) in options"
+        v-show="$router.currentRoute.path !== option.to"
         :key="i"
-        width="100vw"
-        height="auto"
-        flat
+        cols="12"
+        md="6"
+        class="pa-0"
       >
-        <template #cardImage>
-          <v-row align="center" justify="center" class="ma-0 gery lighten-5">
-            <v-col cols="12" md="12" class="pa-0">
-              <nuxt-link v-if="$route.path !== option.to" :to="option.to">
-                <MyImg
-                  height="350"
-                  text-class="white--text"
-                  :title="option.title"
-                  :img-src="option.src || ''"
-                  class="clickable"
-                />
-              </nuxt-link>
-            </v-col>
-          </v-row>
-        </template>
-      </MyCard>
-      <v-row align="center" justify="center" class="ma-0">
-        <a :href="href">
+        <nuxt-link :to="option.to">
           <MyImg
-            max-height="200px"
-            width="100vw"
+            height="350"
             text-class="white--text"
-            :title="title"
-            :img-src="src || ''"
+            :title="option.title"
+            :img-src="option.src || ''"
             class="clickable"
           />
-        </a>
-      </v-row>
+        </nuxt-link>
+      </v-col>
+    </v-row>
+    <v-row align="center" justify="center" class="ma-0">
+      <a :href="href">
+        <MyImg
+          :title="title"
+          height="450"
+          width="100vw"
+          text-class="white--text"
+          :img-src="src || ''"
+          class="clickable"
+        />
+      </a>
     </v-row>
   </v-container>
 </template>
@@ -43,37 +38,34 @@
 <script>
 export default {
   components: {
-    MyCard: () => import('@/components/Atom/TheCard'),
     MyImg: () => import('@/components/Atom/TheImg'),
   },
   data() {
     return {
       overpy: false,
-
+      src: 'images/ichl.jpg',
+      title: '間質性膀胱炎友の会',
+      href: 'https://ichl.jp/about',
       options: [
         {
           name: 'HOME',
-          src: 'images/community.jpg',
+          src: 'images/top.jpg',
           title: 'HOME',
           to: '/',
         },
         {
           name: 'About',
-          src: 'images/develop.jpg',
+          src: 'images/about.jpg',
           title: 'About',
-          to: 'about',
+          to: '/about',
         },
         {
           name: 'お問い合わせ',
-          src: 'images/consul.jpg',
+          src: 'images/contact.jpg',
           title: 'お問い合わせ',
-          to: 'from',
+          to: '/form',
         },
       ],
-      name: '間質性膀胱炎友の会',
-      src: 'images/consul.jpg',
-      title: '間質性膀胱炎友の会',
-      href: 'https://ichl.jp',
     }
   },
 }

@@ -1,4 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
+import env from 'dotenv'
+
+const { infoApiKey, infoApiURL } = process.env
 
 export default {
   /*
@@ -59,6 +62,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
   ],
   /*
    ** Axios module configuration
@@ -92,4 +96,8 @@ export default {
    */
   build: {},
   generate: {},
+  env: {
+    infoApiKey,
+    infoApiURL,
+  },
 }

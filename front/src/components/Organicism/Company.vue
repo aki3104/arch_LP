@@ -1,5 +1,5 @@
 <template>
-  <v-row align="center" justify="center">
+  <v-row align="center" justify="center" class="mt-12">
     <v-simple-table height="300px">
       <template v-slot:default>
         <tbody>

@@ -6,7 +6,7 @@
           class="fixed-bg"
           width="100vw"
           :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-          :src="require('@/static/images/top2.jpg')"
+          :src="require('@/static/images/top.jpg')"
         >
           <v-theme-provider dark>
             <v-container id="image" fill-height fluid pa-0 class="fixed-bg">
@@ -16,12 +16,7 @@
                 justify="center"
               >
                 <v-col class="white--text text-center" cols="12" tag="h1">
-                  <span
-                    class="font-weight-light"
-                    :class="[
-                      $vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2',
-                    ]"
-                  >
+                  <span class="font-weight-light">
                     WELCOME TO
                   </span>
                   <br />
@@ -38,7 +33,7 @@
                   class="align-self-end"
                   fab
                   outlined
-                  @click="$vuetify.goTo('#hero')"
+                  @click="$vuetify.goTo('#introduct')"
                 >
                   <v-icon>mdi-chevron-double-down</v-icon>
                 </v-btn>

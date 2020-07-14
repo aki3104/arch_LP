@@ -1,6 +1,6 @@
 <template>
   <v-row no-gutters class="fixed-bg">
-    <v-img class="fixed-bg" :width="width" :min-height="height" :src="imgSrc">
+    <v-img class="fixed-bg" :width="width" :height="height" :src="imgSrc">
       <v-theme-provider dark>
         <v-container fill-height fluid pa-0 class="fixed-bg">
           <v-row align="center" justify="center">

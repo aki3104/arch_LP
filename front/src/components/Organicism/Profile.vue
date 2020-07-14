@@ -1,5 +1,5 @@
 <template>
-  <v-row align="center" justify="center">
+  <v-row align="center" justify="center" class="my-12">
     <v-card max-width="600" min-height="200" flat>
       <v-card-title>
         <h2>

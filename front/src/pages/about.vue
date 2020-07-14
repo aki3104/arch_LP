@@ -4,10 +4,11 @@
       :img-src="require('@/static/images/title.jpg')"
       widht="100vw"
       height="100px"
-      title="業務内容"
+      title="会社について"
     />
     <MyCompany />
     <MyProfile />
+    <MyLink />
   </v-container>
 </template>
 
@@ -17,6 +18,7 @@ export default {
     MyProfile: () => import('@/components/Organicism/Profile'),
     MyCompany: () => import('@/components/Organicism/Company'),
     MyImg: () => import('@/components/Atom/TheImg'),
+    MyLink: () => import('@/components/Organicism/Link'),
   },
 }
 </script>

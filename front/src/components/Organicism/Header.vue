@@ -4,7 +4,7 @@
     <v-app-bar :clipped-left="clipped" :fixed="true" app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>
-        <v-img />
+        <v-img width="80px" height="40px" src="/images/ARCH.png" />
       </v-toolbar-title>
       <v-spacer />
     </v-app-bar>
@@ -50,7 +50,7 @@ export default {
         {
           icon: 'fa-calendar-alt',
           title: 'お問い合わせ',
-          to: '/about',
+          to: '/form',
         },
       ],
       right: true,
