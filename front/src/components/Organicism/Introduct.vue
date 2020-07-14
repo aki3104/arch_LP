@@ -1,6 +1,6 @@
 <template>
   <v-container pa-0 ma-0 fluid>
-    <v-row align="center" justify="center" class="ma-0" id="introduct">
+    <v-row id="introduct" align="center" justify="center" class="ma-0">
       <MyCard
         v-for="(option, i) in options"
         :key="i"
@@ -10,7 +10,7 @@
       >
         <template v-if="i % 2 === 0" #cardText>
           <v-row align="center" justify="center" class="ma-0 gery lighten-5">
-            <v-col cols="12" md="6" class="pa-5">
+            <v-col cols="0" md="6" class="pa-5 d-none d-md-block">
               {{ option.text }}
             </v-col>
             <v-col cols="12" md="6" class="pa-0">
@@ -20,6 +20,9 @@
                 :title="option.title"
                 :img-src="option.src || ''"
               />
+            </v-col>
+            <v-col cols="12" md="0" class="pa-5 d-md-none">
+              {{ option.text }}
             </v-col>
           </v-row>
         </template>
