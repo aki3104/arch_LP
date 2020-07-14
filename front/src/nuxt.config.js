@@ -1,4 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
+import env from 'dotenv'
+
+const { infoApiKey, infoApiURL } = process.env
 
 export default {
   /*
@@ -59,6 +62,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
   ],
   /*
    ** Axios module configuration
@@ -72,9 +76,9 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
-        dark: {
+        light: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
@@ -91,4 +95,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  generate: {},
+  env: {
+    infoApiKey,
+    infoApiURL,
+  },
 }
