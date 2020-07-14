@@ -121,11 +121,10 @@ export default {
           content: this.text,
         })
         .then(function (req) {
-          alert("送信しました。") 
-
+          alert('送信しました。')
         })
         .catch(function (error) {
-          alert("送信が失敗しました")
+          alert('送信が失敗しました')
         })
     },
   },
