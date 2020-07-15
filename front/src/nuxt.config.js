@@ -19,7 +19,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
+    titleTemplate: 'arch  | %s',
     title: 'arch' || '',
     meta: [
       { charset: 'utf-8' },
