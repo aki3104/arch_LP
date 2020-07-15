@@ -15,5 +15,10 @@ export default {
     MyContactFlow: () => import('@/components/Organicism/ContactFlow'),
     MyLink: () => import('@/components/Organicism/Link'),
   },
+    head() {
+    return {
+      title: 'Home',
+    }
+  },
 }
 </script>

@@ -18,5 +18,10 @@ export default {
     MyImg: () => import('@/components/Atom/TheImg'),
     MyLink: () => import('@/components/Organicism/Link'),
   },
+  head() {
+    return {
+      title: 'Form',
+    }
+  },
 }
 </script>
