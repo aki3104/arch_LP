@@ -125,6 +125,7 @@ export default {
         })
         .catch(function (error) {
           alert('送信が失敗しました')
+          console.log(error)
         })
     },
   },
