@@ -1,23 +1,25 @@
 <template>
-  <v-row align="center" justify="center" class="my-12">
-    <v-card max-width="600" min-height="200" flat>
-      <v-card-title>
-        <h2>
-          {{ title }}
-        </h2>
-      </v-card-title>
-      <v-container>
-        <v-row align="center" justify="center">
-          <v-col cols="12" md="8">
-            {{ text }}
-          </v-col>
-          <v-col cols="6" md="4">
-            <v-img :src="src" />
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-card>
-  </v-row>
+  <v-container pa-0 ma-0>
+    <v-row align="center" justify="center" class="my-12">
+      <v-card max-width="100vw" min-height="200" flat>
+        <v-card-title>
+          <h2>
+            {{ title }}
+          </h2>
+        </v-card-title>
+        <v-container>
+          <v-row align="center" justify="center">
+            <v-col cols="12" md="8">
+              {{ text }}
+            </v-col>
+            <v-col cols="6" md="4">
+              <v-img :src="src" />
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
